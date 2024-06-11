@@ -5,6 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch Apex Debugger",
+      "type": "apex",
+      "request": "launch",
+      "salesforceProject": "${workspaceRoot}"
+    }
+  ]
+  "configurations": [
+    {
       "name": "Launch Apex Replay Debugger",
       "type": "apex-replay",
       "request": "launch",
@@ -14,3 +22,4 @@
     }
   ]
 }
+
