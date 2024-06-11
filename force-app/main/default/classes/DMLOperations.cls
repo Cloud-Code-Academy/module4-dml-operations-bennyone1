@@ -82,7 +82,7 @@ public with sharing class DMLOperations {
         Contact contactRecord = [SELECT Id, LastName FROM Contact WHERE Id = :contactId WITH USER_MODE];
         contactRecord.Lastname = newLastName;
         
-        update  as user contactRecord;
+        update as user contactRecord;
     }
 
     /**
@@ -192,8 +192,8 @@ public with sharing class DMLOperations {
             acc = new Account(Name = accountName);
             acc.Description = 'New Account';
         }
-            upsert as user acc;
-		    return acc;
+        upsert as user acc;
+		return acc;
 	}
 
     /**
@@ -242,7 +242,6 @@ public with sharing class DMLOperations {
                     contact.AccountId = accountMap.get(accountName).Id;
                 }
             }
-
             upsert as user contactsToUpsert;
         }
     
